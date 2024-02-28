@@ -33,14 +33,11 @@ const textLoad = () => {
     textLoad.textContent = "Progammer"
   }, 0);
   setTimeout(() => {
-    textLoad.textContent = "Designer"
+    textLoad.textContent = "Web Developer"
   }, 4000);
   setTimeout(() => {
-    textLoad.textContent = "Web Developer"
-  }, 8000);
-  setTimeout(() => {
     textLoad.textContent = "Frontend Developer"
-  }, 12000);
+  }, 8000);
 }
 textLoad();
 setInterval(textLoad, 12000);
@@ -62,7 +59,7 @@ if ($(".text-slider").length == 1) {
 
 //typed
 new Typed('#typed', {
-  strings: ['Web Developer', 'Frontend Developer', 'Designer', 'Progammer',],
+  strings: ['Web Developer', 'Frontend Developer', 'Progammer',],
   typeSpeed: 100,
   backSpeed: 30,
   delaySpeed: 1000,
