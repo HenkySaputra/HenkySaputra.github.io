@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hennn</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="/dist/output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/dist/style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#4682A9",
+            dark: "#0f172a",
+            secondary: "#64748b",
+          },
+          screens: {
+            "2xl": "1320px",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="transition duration-300 ease-in-out">
+  <!--navbar-->
+  <header
+    class="sticky top-0 left-0 w-full flex items-center z-10 2xl:ring-2 ring-1 ring-black/5 backdrop-blur-sm bg-white/30 border-slate-500/50 2xl:rounded-full 2xl:mt-5 2xl:top-3 2xl:w-3/4 2xl:items-center 2xl:left-[25vh]"
+    id="header">
+    <div class="container">
+      <div class="flex items-center justify-between">
+        <div class="px-4">
+          <a href="#home"
+            class="font-bold text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#50C4ED] to-[#1B1A55] block">Henn</a>
+        </div>
+        <div class="flex items-center px-4">
+          <button id="hamburger" name="humburger" class="block absolute right-4 lg:hidden">
+            <span class="garis-hamburger transition duration-300 ease-in-out origin-top-left"></span>
+            <span class="garis-hamburger transition duration-300 ease-in-out"></span>
+            <span class="garis-hamburger transition duration-300 ease-in-out origin-top-left"></span>
+          </button>
+          <nav id="nav-menu"
+            class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+            <ul class="block lg:flex">
+              <li class="group">
+                <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">
+                  Home
+                </a>
+              </li>
+              <li class="group">
+                <a href="#portofolio" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">
+                  Portofolio
+                </a>
+              </li>
+              <li class="group">
+                <a href="#skill" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">
+                  Skill
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--navbar end-->
+
+  <!--navbar right start-->
+  <nav id="right-nav" class="hidden">
+    <div class="p-3 right-0 z-10 mt-72 mr-3 flex flex-col items-end fixed rounded-lg bg-opacity-50 bg-white gap-y-4">
+      <!-- Navegation icons -->
+      <a class="hover:text-white" href="#home"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+        </svg>
+      </a>
+    </div>
+  </nav>
+  <!--navbar right end-->
+
+  <!--Hero Section Start-->
+  <section id="home" class="pt-[50px]">
+    <div class="container">
+      <div class="flex flex-wrap">
+        <div class="w-full self-center px-4 lg:w-1/2" data-aos="fade-right">
+          <h1 class="text-base font-semibold text-secondary md:text-xl">
+            Hello Semuanya 👋, Selamat Datang di Portofolio saya
+            <span id="typing"
+              class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#50C4ED] to-[#1B1A55] block text-4xl mt-1 lg:text-5xl">Henky
+              Saputra</span>
+          </h1>
+          <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">
+            <span id="typed"
+              class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#50C4ED] to-[#1B1A55] sec-text"></span>
+          </h2>
+        </div>
+        <div class="w-full self-end py-4 lg:w-1/2">
+          <div class="mt-10 relative lg:mt-0 lg:right-0" data-aos="fade-left">
+            <img src="/dist/img/henky.png" width="400" height="400" alt="LOGO" class="max-w-full mx-auto" />
+            <span class="absolute bottom-0 -z-10 left-1/2 -translate-x-1/2 md:scale-125"><svg width="600" height="470"
+                viewBox="0 0 200 200" xmlns="http://www.w3.org/3000/svg">
+                <path fill="#1B1A55"
+                  d="M54.7,-45.5C63,-33.3,56.3,-11,50.9,11.3C45.6,33.5,41.5,55.6,28.5,63.6C15.4,71.6,-6.6,65.4,-26.5,55.6C-46.4,45.8,-64.2,32.2,-67.9,15.6C-71.7,-1.1,-61.4,-21,-47.8,-34.4C-34.1,-47.9,-17.1,-55,3.1,-57.4C23.2,-59.9,46.4,-57.7,54.7,-45.5Z"
+                  transform="translate(100 100) scale(1.2)" />
+              </svg></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Hero Section End-->
+
+  <!--Portofolio start-->
+  <section id="portofolio" class="pt-36 pb-16 bg-slate-100">
+    <div class="container">
+      <div class="w-full px-4">
+        <div class="max-w-xl mx-auto text-center mb-16">
+          <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
+          <h2 class="font-bold text-dark text-3xl mb-4">Project yang pernah dibuat</h2>
+        </div>
+      </div>
+      <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
+        <div class="mb-12 p-4 md:w-1/2" data-aos="zoom-in">
+          <div class="rounded-lg shadow-md overflow-hidden">
+            <img src="dist/img/portfolio/jejakbaikpohon.png" alt="port1" width="w-full" class="" />
+          </div>
+          <h3 class="font-semibold text-dark text-xl mt-[20px] mb-3">
+            Aplikasi Jejak Baik Pohon
+          </h3>
+          <p class="font-medium text-base text-secondary">
+            Jejak Baik Pohon merupakan inovatif startup di ranah crowdfunding yang bertujuan untuk menyelamatkan
+            lingkungan melalui
+            berbagai program yang ditawarkan.
+          </p>
+        </div>
+        <div class="mb-12 p-4 md:w-1/2" data-aos="zoom-in">
+          <div class="rounded-lg shadow-md overflow-hidden">
+            <img src="dist/img/portfolio/selfassesment.png" alt="port2" width="w-full" class="" />
+          </div>
+          <h3 class="font-semibold text-dark text-xl mt-[20px] mb-3">
+            Aplikasi Self Assesment
+          </h3>
+          <p class="font-medium text-base text-secondary">
+            Aplikasi penilaian yang saya buat di PT Indo Tekno Karya, Aplikasi penilaian untuk masing-masing karyawan
+          </p>
+        </div>
+        <div class="mb-12 p-4 md:w-1/2" data-aos="zoom-in">
+          <div class="rounded-lg shadow-md overflow-hidden">
+            <img src="dist/img/portfolio/outsource.png" alt="port3" width="w-full" class="" />
+          </div>
+          <h3 class="font-semibold text-dark text-xl mt-[20px] mb-3">
+            Aplikasi Outsourceing
+          </h3>
+          <p class="font-medium text-base text-secondary">
+            Aplikasi saya buat di PT Indo Tekno Karya, pengalihan sebagian atau seluruh kegiatan operasional suatu
+            perusahaan kepada pihak ketiga.
+          </p>
+        </div>
+        <div class="mb-12 p-4 md:w-1/2" data-aos="zoom-in">
+          <div class="rounded-lg shadow-md overflow-hidden">
+            <img src="dist/img/portfolio/lempake.png" alt="port3" width="w-full" class="" />
+          </div>
+          <h3 class="font-semibold text-dark text-xl mt-[20px] mb-3">
+            Website RT 39 Lempake
+          </h3>
+          <p class="font-medium text-base text-secondary">
+            Aplikasi pendataan sensus penduduk untuk warga khususnya warga RT 39 Lempake, Samarinda
+          </p>
+        </div>
+        <div class="mb-12 p-4 md:w-1/2" data-aos="zoom-in">
+          <div class="rounded-lg shadow-md overflow-hidden">
+            <img src="dist/img/portfolio/noteapp.png" alt="port3" width="w-full" class="" />
+          </div>
+          <h3 class="font-semibold text-dark text-xl mt-[20px] mb-3">
+            Aplikasi Note App
+          </h3>
+          <p class="font-medium text-base text-secondary">
+            Aplikasi to do list yang dibuat untuk keperluan project akhir kuliah
+          </p>
+        </div>
+        <div class="mb-12 p-4 md:w-1/2" data-aos="zoom-in">
+          <div class="rounded-lg shadow-md overflow-hidden">
+            <img src="dist/img/portfolio/inoptic.png" alt="port3" width="w-full" class="" />
+          </div>
+          <h3 class="font-semibold text-dark text-xl mt-[20px] mb-3">
+            Aplikasi inOptic
+          </h3>
+          <p class="font-medium text-base text-secondary">
+            Aplikasi pembelajaran tentang kabel fiber optic dan segala toolsnya
+          </p>
+        </div>
+        <div class="mb-12 p-4 md:w-1/2" data-aos="zoom-in">
+          <div class="rounded-lg shadow-md overflow-hidden">
+            <img src="dist/img/portfolio/smada.png" alt="port3" width="w-full" class="" />
+          </div>
+          <h3 class="font-semibold text-dark text-xl mt-[20px] mb-3">
+            Aplikasi Sekolah
+          </h3>
+          <p class="font-medium text-base text-secondary">
+            Aplikasi tentang profile sekolah dan pemberitahuan semua kurikulum, keperluan sekolah dan sebagainya
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Portofolio end-->
+
+  <!--Skill start-->
+  <section id="skill" class="pt-36 pb-32 bg-slate-100/50">
+    <div class="container">
+      <div class="w-full px-4">
+        <div class="max-w-xl mx-auto text-center mb-16">
+          <h4 class="font-semibold text-lg text-primary mb-2">Skils</h4>
+          <h2 class="font-bold text-dark text-3xl mb-4">Kemampuan yang saya pahami</h2>
+        </div>
+      </div>
+      <div class="w-full md:flex justify-center xl:w-10/12 mr-9 xl:mx-auto">
+        <div class="mb-12 px-6 md:w-1/2">
+          <div class="mb-2">
+            <div class="flex justify-between mb-1">
+              <span class="text-base font-medium text-black">HTML</span>
+              <span class="text-sm font-medium text-black">95%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+              <div class="bg-red-500 h-2.5 rounded-full" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="mb-2">
+            <div class="flex justify-between mb-1">
+              <span class="text-base font-medium text-black">CSS</span>
+              <span class="text-sm font-medium text-black">80%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+              <div class="bg-blue-400 h-2.5 rounded-full" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="mb-2">
+            <div class="flex justify-between mb-1">
+              <span class="text-base font-medium text-black">Javascript</span>
+              <span class="text-sm font-medium text-black">20%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+              <div class="bg-orange-400 h-2.5 rounded-full" style="width: 10%"></div>
+            </div>
+          </div>
+          <div class="mb-2">
+            <div class="flex justify-between mb-1">
+              <span class="text-base font-medium text-black">PHP</span>
+              <span class="text-sm font-medium text-black">90%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+              <div class="bg-yellow-400 h-2.5 rounded-full" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="mb-2">
+            <div class="flex justify-between mb-1">
+              <span class="text-base font-medium text-black">Vue Js</span>
+              <span class="text-sm font-medium text-black">40%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+              <div class="bg-green-400 h-2.5 rounded-full" style="width: 40%"></div>
+            </div>
+          </div>
+          <div class="mb-2">
+            <div class="flex justify-between mb-1">
+              <span class="text-base font-medium text-black">Tailwind Css</span>
+              <span class="text-sm font-medium text-black">35%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+              <div class="bg-blue-700 h-2.5 rounded-full" style="width: 35%"></div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mb-12 px-6 flex gap-x-4 gap-y-4 flex-wrap justify-center items-center md:border-l-4 border-dark md:w-1/2"
+          data-aos-anchor-placement="center-center">
+          <div
+            class="bg-slate-200 text-black rounded-lg p-6 justify-center items-center shadow-xl hover:text-white hover:bg-slate-700 hover:scale-110 transition duration-500"
+            data-aos="zoom-in">
+            <div class="px-2">
+              <svg stroke="currentColor" fill="currentColor" class="text-yellow-500" stroke-width="0"
+                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" height="70" width="70">
+                <title></title>
+                <path
+                  d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z">
+                </path>
+              </svg>
+            </div>
+            <p class="mt-1 text-center">Javascript</p>
+          </div>
+          <div
+            class="bg-slate-200 rounded-lg p-6 justify-center items-center flex-row shadow-xl text-black hover:text-white hover:bg-slate-700 hover:scale-90 transition duration-500"
+            data-aos="zoom-in">
+            <div class="px-2">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                class="text-orange-500" xmlns="http://www.w3.org/2000/svg" height="70" width="70">
+                <title></title>
+                <path
+                  d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z">
+                </path>
+              </svg>
+            </div>
+            <p class="mt-1 text-center">HTML</p>
+          </div>
+          <div
+            class="bg-slate-200 rounded-lg p-6 justify-center items-center flex-row shadow-xl text-black hover:text-white hover:bg-slate-700 hover:scale-110 transition duration-500"
+            data-aos="zoom-in">
+            <div class="px-2">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="text-blue-500"
+                xmlns="http://www.w3.org/2000/svg" height="70" width="70">
+                <title></title>
+                <path
+                  d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z">
+                </path>
+              </svg>
+            </div>
+            <p class="mt-1 text-center">CSS</p>
+          </div>
+          <div
+            class="bg-slate-200 rounded-lg p-6 justify-center items-center flex-row shadow-xl text-black hover:text-white hover:bg-slate-700 hover:scale-110 transition duration-500"
+            data-aos="zoom-in">
+            <div class="px-2">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 50 50" class="text-blue-500"
+                xmlns="http://www.w3.org/2000/svg" height="70" width="70">
+                <title></title>
+                <path
+                  d="M 25 12 C 18.507813 12 12.621094 13.359375 8.273438 15.628906 C 3.925781 17.898438 1 21.167969 1 25 C 1 28.832031 3.925781 32.101563 8.273438 34.371094 C 12.621094 36.640625 18.507813 38 25 38 C 31.492188 38 37.378906 36.640625 41.726563 34.371094 C 46.074219 32.101563 49 28.832031 49 25 C 49 21.167969 46.074219 17.898438 41.726563 15.628906 C 37.378906 13.359375 31.492188 12 25 12 Z M 25 14 C 31.210938 14 36.824219 15.324219 40.800781 17.402344 C 44.777344 19.476563 47 22.203125 47 25 C 47 27.796875 44.777344 30.523438 40.800781 32.597656 C 36.824219 34.675781 31.210938 36 25 36 C 18.789063 36 13.175781 34.675781 9.199219 32.597656 C 5.222656 30.523438 3 27.796875 3 25 C 3 22.203125 5.222656 19.476563 9.199219 17.402344 C 13.175781 15.324219 18.789063 14 25 14 Z M 22.507813 16 L 20 28 L 22.625 28 L 23.890625 22 L 25.988281 22 C 26.65625 22 27.101563 22.109375 27.308594 22.332031 C 27.511719 22.554688 27.554688 22.976563 27.4375 23.582031 L 26.480469 28 L 29.144531 28 L 30.183594 23.222656 C 30.40625 22.078125 30.238281 21.238281 29.683594 20.726563 C 29.117188 20.207031 28.121094 20 26.636719 20 L 24.296875 20 L 25.128906 16 Z M 11 20 L 8.972656 31 L 11.617188 31 L 12.144531 28 L 13.792969 28 C 17.238281 28 19.113281 27.203125 19.8125 24.246094 C 20.414063 21.703125 18.875 20 16.332031 20 Z M 32 20 L 29.972656 31 L 32.617188 31 L 33.144531 28 L 34.792969 28 C 38.238281 28 40.113281 27.203125 40.8125 24.246094 C 41.414063 21.703125 39.875 20 37.332031 20 Z M 13.273438 22 L 15.332031 22 C 17.042969 22 17.402344 22.769531 17.3125 23.625 C 17.082031 25.832031 15.707031 26 14.230469 26 L 12.515625 26 Z M 34.273438 22 L 36.332031 22 C 38.042969 22 38.402344 22.769531 38.3125 23.625 C 38.082031 25.832031 36.707031 26 35.230469 26 L 33.515625 26 Z" />
+              </svg>
+            </div>
+            <p class="mt-1 text-center">PHP</p>
+          </div>
+          <div
+            class="bg-slate-200 rounded-lg p-6 justify-center items-center flex-row shadow-xl text-black hover:text-white hover:bg-slate-700 hover:scale-110 transition duration-500"
+            data-aos="zoom-in">
+            <div class="px-2">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 -17.5 256 256"
+                class="text-green-700" xmlns="http://www.w3.org/2000/svg" height="70" width="70">
+                <title></title>
+                <path d="M204.8 0H256L128 220.8 0 0h97.92L128 51.2 157.44 0h47.36z" fill="#41B883" />
+                <path d="M0 0l128 220.8L256 0h-51.2L128 132.48 50.56 0H0z" fill="#41B883" />
+                <path d="M50.56 0L128 133.12 204.8 0h-47.36L128 51.2 97.92 0H50.56z" fill="#35495E" />
+
+              </svg>
+            </div>
+            <p class="mt-1 text-center">Vue Js</p>
+          </div>
+          <div
+            class="bg-slate-200 rounded-lg p-6 justify-center items-center flex-row shadow-xl text-black hover:text-white hover:bg-slate-700 hover:scale-110 transition duration-500"
+            data-aos="zoom-in">
+            <div class="px-2">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 48 48" class="text-white-500"
+                xmlns="http://www.w3.org/2000/svg" height="70" width="70">
+                <path fill="#00acc1"
+                  d="M24,9.604c-6.4,0-10.4,3.199-12,9.597c2.4-3.199,5.2-4.398,8.4-3.599 c1.826,0.456,3.131,1.781,4.576,3.247C27.328,21.236,30.051,24,36,24c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.6 c-1.825-0.456-3.13-1.781-4.575-3.247C32.672,12.367,29.948,9.604,24,9.604L24,9.604z M12,24c-6.4,0-10.4,3.199-12,9.598 c2.4-3.199,5.2-4.399,8.4-3.599c1.825,0.457,3.13,1.781,4.575,3.246c2.353,2.388,5.077,5.152,11.025,5.152 c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.599c-1.826-0.456-3.131-1.781-4.576-3.246C20.672,26.764,17.949,24,12,24 L12,24z" />
+              </svg>
+            </div>
+            <p class="mt-1 text-center">Tailwind Css</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--skill end-->
+
+  <!--Footer start-->
+  <footer class="bg-[#1B1A55] pt-24 pb-12">
+    <div class="container">
+      <div class="flex flex-wrap">
+        <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3">
+          <h2 class="mb-5 text-4xl font-bold text-white">Henky Saputra</h2>
+        </div>
+        <div class="mb-12 w-full px-4 md:w-1/3">
+          <h3 class="mb-5 text-xl font-semibold text-white">Mari Berteman</h3>
+          <ul class="text-slate-300">
+            <li>
+              <a href="" target="_blank"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>YouTube</title>
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <!-- Instagram -->
+              <a href="" target="_blank"
+                class="mr-3 mt-2 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>Instagram</title>
+                  <path
+                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="" target="_blank"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white mt-2">
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>Linkedin</title>
+                  <path
+                    d="M21 0H3C1.346 0 0 1.346 0 3v18c0 1.654 1.346 3 3 3h18c1.654 0 3-1.346 3-3V3c0-1.654-1.346-3-3-3zM7.875 20.25h-3.75v-12h3.75v12zm-1.875-13.5a1.876 1.876 0 1 1 1.875-1.875 1.877 1.877 0 0 1-1.875 1.875zm11.625 13.5h-3.75v-6.75c0-1.59-.027-3.648-2.25-3.648-2.253 0-2.598 1.762-2.598 3.584v6.814h-3.75v-12h3.579v2.57h.048c.501-.948 1.728-1.948 3.53-1.948 3.774 0 4.475 2.488 4.475 5.72v6.658h-.001v.002z" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="mb-12 w-full px-4 md:w-1/3">
+          <h3 class="mb-5 text-xl font-semibold text-white">Cari Tahu</h3>
+          <ul class="text-slate-300">
+            <li>
+              <a href="#home" class="mb-3 inline-block text-base hover:text-primary">Home</a>
+            </li>
+
+            <li>
+              <a href="#portfolio" class="mb-3 inline-block text-base hover:text-primary">Portfolio</a>
+            </li>
+            <li>
+              <a href="#skill" class="mb-3 inline-block text-base hover:text-primary">Skills</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="w-full border-t border-slate-700 pt-10">
+        <p class="text-center text-xs font-medium text-slate-500">
+          Dibuat dengan <span class="text-pink-500">love</span> oleh
+          <a href="" target="_blank" class="font-bold text-primary">Henky Saputra</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!--Footer start-->
+
+  <script></script>
+  <script src="/dist/script/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 700,
+    });
+  </script>
+</body>
+
+</html>
