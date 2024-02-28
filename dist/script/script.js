@@ -30,7 +30,7 @@ window.onscroll = function () {
 const text = document.querySelector('.sec-text');
 const textLoad = () => {
   setTimeout(() => {
-    textLoad.textContent = "Progammer"
+    textLoad.textContent = "Programmer"
   }, 0);
   setTimeout(() => {
     textLoad.textContent = "Web Developer"
@@ -59,7 +59,7 @@ if ($(".text-slider").length == 1) {
 
 //typed
 new Typed('#typed', {
-  strings: ['Web Developer', 'Frontend Developer', 'Progammer',],
+  strings: ['Web Developer', 'Frontend Developer', 'Programmer',],
   typeSpeed: 100,
   backSpeed: 30,
   delaySpeed: 1000,
