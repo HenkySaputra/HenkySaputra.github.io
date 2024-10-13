@@ -10,12 +10,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "tailwindcss": "^3.3.3"
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13"
   },
   "dependencies": {
-    "autoprefixer": "^10.4.15",
     "bootstrap-icons": "^1.11.3",
-    "postcss": "^8.4.28",
     "typed.js": "^2.0.16"
   }
 }
